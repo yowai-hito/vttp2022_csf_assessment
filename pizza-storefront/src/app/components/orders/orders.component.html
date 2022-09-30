@@ -1,0 +1,7 @@
+
+<div *ngIf="orderData">
+    <div *ngFor="let order of orderData">
+        <p> Order Id: {{order.orderId}} </p><br>
+        <p>Total: {{order.amount}}</p><br>
+    </div>
+</div>
