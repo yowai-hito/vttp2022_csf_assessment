@@ -1,7 +1,11 @@
 
-<div *ngIf="orderData">
+<div *ngIf="orderData; else NoData">
     <div *ngFor="let order of orderData">
         <p> Order Id: {{order.orderId}} </p><br>
         <p>Total: {{order.amount}}</p><br>
     </div>
 </div>
+
+<ng-template #NoData>
+    <p>Currently No Orders Detected.</p>
+</ng-template>
